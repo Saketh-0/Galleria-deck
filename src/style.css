@@ -99,6 +99,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -106,6 +108,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   overflow-x: hidden;
+  width: 100%;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1989,7 +1992,12 @@ blockquote cite {
    RESPONSIVE — MOBILE
    ============================================================ */
 @media (max-width: 768px) {
-  :root { --nav-height: 64px; }
+  :root { 
+    --nav-height: 64px; 
+    --spacing-md: 1rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 4rem;
+  }
 
   .nav-links, .nav-cta { display: none; }
   .nav-title { display: none; }
@@ -2008,8 +2016,8 @@ blockquote cite {
   .compare-header span:nth-child(n+3),
   .compare-row span:nth-child(n+3) { display: none; }
   .event-specs { gap: 1rem; }
-  .tier-cards { }
-  .hero-line-1 { font-size: 3rem; }
-  .hero-line-2 { font-size: 2rem; }
-  .hero-line-3 { font-size: 1.6rem; }
+  .tier-cards { grid-template-columns: 1fr; }
+  .hero-line-1 { font-size: 2.5rem; }
+  .hero-line-2 { font-size: 1.75rem; }
+  .hero-line-3 { font-size: 1.25rem; }
 }
