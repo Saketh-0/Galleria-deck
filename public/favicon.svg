@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8CC7A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C9A84C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9A7A2E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9A7A2E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C9A84C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8CC7A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer decorative circle -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="256" cy="256" r="240" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Ornamental corner flourishes — top -->
+  <path d="M256 20 Q260 40 280 44 Q260 48 256 68 Q252 48 232 44 Q252 40 256 20Z" fill="url(#goldGrad)" opacity="0.8"/>
+  <!-- bottom -->
+  <path d="M256 492 Q260 472 280 468 Q260 464 256 444 Q252 464 232 468 Q252 472 256 492Z" fill="url(#goldGrad)" opacity="0.8"/>
+  <!-- left -->
+  <path d="M20 256 Q40 252 44 232 Q48 252 68 256 Q48 260 44 280 Q40 260 20 256Z" fill="url(#goldGrad)" opacity="0.8"/>
+  <!-- right -->
+  <path d="M492 256 Q472 252 468 232 Q464 252 444 256 Q464 260 468 280 Q472 260 492 256Z" fill="url(#goldGrad)" opacity="0.8"/>
+  
+  <!-- Inner decorative ring -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+  
+  <!-- Small decorative dots on inner ring -->
+  <circle cx="256" cy="56" r="3" fill="#C9A84C"/>
+  <circle cx="456" cy="256" r="3" fill="#C9A84C"/>
+  <circle cx="256" cy="456" r="3" fill="#C9A84C"/>
+  <circle cx="56" cy="256" r="3" fill="#C9A84C"/>
+  
+  <!-- Vintage arch frame around text -->
+  <path d="M156 320 L156 200 Q156 140 256 120 Q356 140 356 200 L356 320" 
+        fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Decorative scrollwork — left -->
+  <path d="M140 340 Q120 320 130 300 Q140 320 160 310" 
+        fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
+  <!-- Decorative scrollwork — right -->
+  <path d="M372 340 Q392 320 382 300 Q372 320 352 310" 
+        fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Horizontal decorative lines -->
+  <line x1="170" y1="185" x2="220" y2="185" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+  <line x1="292" y1="185" x2="342" y2="185" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+  <line x1="170" y1="340" x2="220" y2="340" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+  <line x1="292" y1="340" x2="342" y2="340" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+  
+  <!-- Small diamond at center top -->
+  <path d="M256 175 L262 185 L256 195 L250 185Z" fill="#C9A84C" opacity="0.7"/>
+  <!-- Small diamond at center bottom -->
+  <path d="M256 345 L262 335 L256 325 L250 335Z" fill="#C9A84C" opacity="0.7"/>
+
+  <!-- "G V E" monogram text -->
+  <text x="256" y="228" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="400" letter-spacing="8" fill="url(#goldGrad)" opacity="0.6">GALLERIA</text>
+  
+  <text x="256" y="295" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="300" letter-spacing="18" fill="url(#goldGrad)">GVE</text>
+  
+  <text x="256" y="322" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" font-weight="400" letter-spacing="6" fill="#C9A84C" opacity="0.7">EST · MDCCCLXXVII</text>
+  
+  <!-- Thin inner frame -->
+  <rect x="148" y="200" width="216" height="140" rx="4" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
+</svg>

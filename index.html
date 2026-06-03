@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galleria GVE — Milan's legendary luxury destination. The world's first mall, home to Prada, Gucci, Louis Vuitton. Leasing, sponsorship & events platform." />
+  <meta property="og:title" content="Galleria GVE | Where Luxury Was Born" />
+  <meta property="og:description" content="The world's finest address. Milan's iconic 147-year-old luxury gallery awaits your brand." />
+  <meta name="theme-color" content="#0A0804" />
+  <title>Galleria GVE | Where Luxury Was Born</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preload" as="image" href="/assets/images/hero_dome.png" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- LOADING SCREEN -->
+  <div id="loader" role="progressbar" aria-label="Loading experience">
+    <canvas id="loader-canvas"></canvas>
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img src="/logo.svg" alt="Galleria GVE Logo" class="loader-logo-img" />
+        <div class="loader-ring">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+            <circle id="loader-progress" cx="50" cy="50" r="45" fill="none" stroke="#C9A84C" stroke-width="1" stroke-dasharray="283" stroke-dashoffset="283" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+          </svg>
+        </div>
+      </div>
+      <p class="loader-tagline">Where Luxury Was Born</p>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav" aria-label="Primary navigation">
+    <div class="nav-logo">
+      <img src="/logo.svg" alt="Galleria GVE" class="nav-logo-img" />
+      <span class="nav-title">Galleria GVE</span>
+    </div>
+    <ul class="nav-links" role="menubar">
+      <li role="menuitem"><a href="#why-galleria" class="nav-link" data-section="why-galleria">Property</a></li>
+      <li role="menuitem"><a href="#retail" class="nav-link" data-section="retail">Retail</a></li>
+      <li role="menuitem"><a href="#luxury" class="nav-link" data-section="luxury">Luxury</a></li>
+      <li role="menuitem"><a href="#dining" class="nav-link" data-section="dining">Dining</a></li>
+      <li role="menuitem"><a href="#events" class="nav-link" data-section="events">Events</a></li>
+      <li role="menuitem"><a href="#platform" class="nav-link" data-section="platform">Platform</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta" id="nav-cta-btn">Enquire Now</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <ul>
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#why-galleria" class="mobile-link">Property</a></li>
+      <li><a href="#retail" class="mobile-link">Retail</a></li>
+      <li><a href="#luxury" class="mobile-link">Luxury</a></li>
+      <li><a href="#dining" class="mobile-link">Dining</a></li>
+      <li><a href="#events" class="mobile-link">Events</a></li>
+      <li><a href="#platform" class="mobile-link">Platform</a></li>
+      <li><a href="#contact" class="mobile-link cta">Enquire Now</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+
+    <!-- SECTION 1: HERO / CINEMATIC INTRO -->
+    <section id="hero" class="section hero-section" aria-label="Hero introduction">
+      <div class="hero-bg">
+        <img src="/assets/images/hero_dome.png" alt="Galleria Vittorio Emanuele II — iconic glass dome interior" class="hero-img" id="hero-img" width="1920" height="1080" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow animate-in">Milan, Italy · Est. 1877</p>
+        <h1 class="hero-title animate-in">
+          <span class="hero-line-1">Galleria</span>
+          <span class="hero-line-2">Vittorio</span>
+          <span class="hero-line-3">Emanuele II</span>
+        </h1>
+        <p class="hero-tagline animate-in">Where Luxury Was Born</p>
+        <div class="hero-divider animate-in"></div>
+        <p class="hero-subtitle animate-in">The world's first and finest mall. 147 years of unbroken prestige at the heart of Milan.</p>
+        <a href="#why-galleria" class="hero-cta animate-in" id="hero-discover-btn">
+          <span>Discover the Property</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WHY THIS PROPERTY -->
+    <section id="why-galleria" class="section why-section" aria-label="Why Galleria Vittorio Emanuele II">
+      <div class="section-inner">
+        <div class="why-stats-bar" id="stats-bar">
+          <div class="stat-item" id="stat-visitors">
+            <span class="stat-number" data-target="15">0</span><span class="stat-suffix">M+</span>
+            <span class="stat-label">Annual Visitors</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item" id="stat-countries">
+            <span class="stat-number" data-target="180">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Countries Represented</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item" id="stat-years">
+            <span class="stat-number" data-target="147">0</span><span class="stat-suffix"></span>
+            <span class="stat-label">Years of Prestige</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item" id="stat-sqm">
+            <span class="stat-number" data-target="12">0</span><span class="stat-suffix">K m²</span>
+            <span class="stat-label">Retail Area</span>
+          </div>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-text-col">
+            <p class="section-eyebrow">The Property</p>
+            <h2 class="section-title">The World's Most<br/>Prestigious Address</h2>
+            <p class="section-body">Constructed in 1877 under the reign of King Victor Emmanuel II, Galleria Vittorio Emanuele II didn't just set the standard for luxury retail — it <em>invented</em> it. Stretching between the Milan Duomo and La Scala Opera House, no other retail address on earth commands this cultural gravity.</p>
+            <p class="section-body">Today, it is not merely a shopping destination. It is a living monument — a UNESCO-recognized heritage site where 15 million visitors from 180 countries come annually, not just to shop, but to <em>experience</em> the apex of Italian civilization.</p>
+            <div class="why-badges">
+              <span class="badge">UNESCO Heritage</span>
+              <span class="badge">Milan City Centre</span>
+              <span class="badge">Global Media Coverage</span>
+              <span class="badge">147 Years Continuous Operation</span>
+            </div>
+          </div>
+          <div class="why-image-col">
+            <div class="why-image-frame">
+              <img src="/assets/images/night_exterior.png" alt="Galleria Vittorio Emanuele II night exterior with Milan Duomo" loading="lazy" class="reveal-img" width="800" height="600" />
+              <div class="image-caption">Piazza del Duomo · Milan's Cultural Heart</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-bar">
+          <div class="location-item">
+            <div class="location-icon" aria-hidden="true">⊕</div>
+            <div>
+              <strong>Adjacent to Milan Duomo</strong>
+              <span>Italy's #1 tourist landmark</span>
+            </div>
+          </div>
+          <div class="location-item">
+            <div class="location-icon" aria-hidden="true">♪</div>
+            <div>
+              <strong>Steps from La Scala</strong>
+              <span>The world's greatest opera house</span>
+            </div>
+          </div>
+          <div class="location-item">
+            <div class="location-icon" aria-hidden="true">✈</div>
+            <div>
+              <strong>45 min from Malpensa</strong>
+              <span>Europe's 4th busiest airport</span>
+            </div>
+          </div>
+          <div class="location-item">
+            <div class="location-icon" aria-hidden="true">🚄</div>
+            <div>
+              <strong>Milan Centrale — 15 min</strong>
+              <span>High-speed rail to all major cities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: RETAIL ENVIRONMENT -->
+    <section id="retail" class="section retail-section" aria-label="Retail environment">
+      <div class="section-inner">
+        <p class="section-eyebrow light">Retail</p>
+        <h2 class="section-title light">The Address Only<br/>the World's Best Call Home</h2>
+        <p class="section-body light">Every brand here is a statement. The Galleria's tenant mix reads like the who's who of global luxury — because nothing less is permitted. When your brand takes space here, you join a 147-year legacy of uncompromising excellence.</p>
+
+        <div class="tenant-scroll-wrapper" id="tenant-gallery" aria-label="Luxury tenant brands">
+          <div class="tenant-track" id="tenant-track">
+            <div class="tenant-card" id="tenant-prada">
+              <div class="tenant-img-wrap"><img src="/assets/images/retail_gallery.png" alt="Prada flagship at Galleria" loading="lazy" width="700" height="440" /></div>
+              <div class="tenant-info">
+                <h3>Prada</h3>
+                <p>Flagship since 1913. The original Galleria tenant. Four floors of unparalleled Milanese design.</p>
+                <span class="tenant-tag">Luxury Fashion</span>
+              </div>
+            </div>
+            <div class="tenant-card" id="tenant-lv">
+              <div class="tenant-img-wrap"><img src="/assets/images/leasing_space.png" alt="Louis Vuitton at Galleria" loading="lazy" width="700" height="440" /></div>
+              <div class="tenant-info">
+                <h3>Louis Vuitton</h3>
+                <p>The global icon of travel and luxury goods, holding its most prestigious Italian address.</p>
+                <span class="tenant-tag">Luxury Goods</span>
+              </div>
+            </div>
+            <div class="tenant-card" id="tenant-gucci">
+              <div class="tenant-img-wrap"><img src="/assets/images/fashion_event.png" alt="Gucci at Galleria" loading="lazy" width="700" height="440" /></div>
+              <div class="tenant-info">
+                <h3>Gucci</h3>
+                <p>Florentine luxury at its finest, right in the heart of the gallery's north arcade.</p>
+                <span class="tenant-tag">Luxury Fashion</span>
+              </div>
+            </div>
+            <div class="tenant-card" id="tenant-ferrari">
+              <div class="tenant-img-wrap"><img src="/assets/images/sponsorship.png" alt="Ferrari store at Galleria" loading="lazy" width="700" height="440" /></div>
+              <div class="tenant-info">
+                <h3>Ferrari</h3>
+                <p>The Ferrari Store — automotive excellence meets lifestyle retail in an iconic space.</p>
+                <span class="tenant-tag">Luxury Automotive</span>
+              </div>
+            </div>
+            <div class="tenant-card" id="tenant-versace">
+              <div class="tenant-img-wrap"><img src="/assets/images/retail_gallery.png" alt="Versace at Galleria" loading="lazy" width="700" height="440" /></div>
+              <div class="tenant-info">
+                <h3>Versace</h3>
+                <p>Bold, iconic Italian design in its home city, at the world's most recognizable retail address.</p>
+                <span class="tenant-tag">Luxury Fashion</span>
+              </div>
+            </div>
+            <div class="tenant-card" id="tenant-tod">
+              <div class="tenant-img-wrap"><img src="/assets/images/leasing_space.png" alt="Available luxury space" loading="lazy" width="700" height="440" /></div>
+              <div class="tenant-info">
+                <h3>Your Brand Here</h3>
+                <p>Premium retail space available. Join the most exclusive tenant roster in global luxury retail.</p>
+                <span class="tenant-tag available">Available Now</span>
+              </div>
+            </div>
+          </div>
+          <div class="tenant-nav" aria-label="Scroll tenant cards">
+            <button class="tenant-prev" id="tenant-prev" aria-label="Previous tenant">←</button>
+            <button class="tenant-next" id="tenant-next" aria-label="Next tenant">→</button>
+          </div>
+        </div>
+
+        <div class="retail-metrics">
+          <div class="metric-box">
+            <span class="metric-num">€18,000</span>
+            <span class="metric-label">Avg. per m² annual rent — highest in Italy</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-num">0%</span>
+            <span class="metric-label">Effective vacancy rate — always at capacity</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-num">100%</span>
+            <span class="metric-label">Luxury & premium brand composition</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LUXURY POSITIONING -->
+    <section id="luxury" class="section luxury-section" aria-label="Luxury positioning">
+      <div class="luxury-bg">
+        <img src="/assets/images/mosaic_floor.png" alt="Galleria iconic mosaic floor with Taurus bull" loading="lazy" class="luxury-bg-img" width="1920" height="1080" />
+        <div class="luxury-overlay"></div>
+      </div>
+      <div class="section-inner luxury-inner">
+        <div class="luxury-quote-block">
+          <div class="quote-mark" aria-hidden="true">"</div>
+          <blockquote>
+            <p class="luxury-quote">There is no second address.<br/>There is only the Galleria.</p>
+          </blockquote>
+          <cite>— Monocle, 2024 Global Retail Report</cite>
+        </div>
+        <div class="luxury-pillars">
+          <div class="pillar-card" id="pillar-heritage">
+            <div class="pillar-icon" aria-hidden="true">◈</div>
+            <h3>Unmatched Heritage</h3>
+            <p>147 years. One address. Zero compromise. The Galleria is the only retail property on earth that predates modern luxury — because it created it.</p>
+          </div>
+          <div class="pillar-card" id="pillar-footfall">
+            <div class="pillar-icon" aria-hidden="true">◈</div>
+            <h3>Elite Footfall</h3>
+            <p>15 million annual visitors skew heavily toward ultra-high-net-worth individuals, fashion industry leaders, and global cultural influencers.</p>
+          </div>
+          <div class="pillar-card" id="pillar-media">
+            <div class="pillar-icon" aria-hidden="true">◈</div>
+            <h3>Global Media Gravity</h3>
+            <p>The Galleria generates organic earned media across Vogue, Architectural Digest, Condé Nast Traveller, and every major luxury publication every season.</p>
+          </div>
+        </div>
+        <div class="comparison-table" role="table" aria-label="Galleria vs global luxury retail comparison">
+          <div class="compare-header" role="row">
+            <span role="columnheader">Metric</span>
+            <span role="columnheader">Galleria GVE</span>
+            <span role="columnheader">5th Avenue NY</span>
+            <span role="columnheader">Bond Street London</span>
+          </div>
+          <div class="compare-row" role="row">
+            <span role="cell">Heritage (Years)</span>
+            <span role="cell" class="gve-val">147</span>
+            <span role="cell">~80</span>
+            <span role="cell">~100</span>
+          </div>
+          <div class="compare-row" role="row">
+            <span role="cell">UNESCO Recognition</span>
+            <span role="cell" class="gve-val">✓</span>
+            <span role="cell">✗</span>
+            <span role="cell">✗</span>
+          </div>
+          <div class="compare-row" role="row">
+            <span role="cell">Enclosed Landmark</span>
+            <span role="cell" class="gve-val">✓</span>
+            <span role="cell">✗</span>
+            <span role="cell">✗</span>
+          </div>
+          <div class="compare-row" role="row">
+            <span role="cell">Annual Visitors</span>
+            <span role="cell" class="gve-val">15M+</span>
+            <span role="cell">~12M</span>
+            <span role="cell">~8M</span>
+          </div>
+          <div class="compare-row" role="row">
+            <span role="cell">Cultural Adjacency</span>
+            <span role="cell" class="gve-val">Duomo + La Scala</span>
+            <span role="cell">Central Park</span>
+            <span role="cell">Hyde Park</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: DINING & LIFESTYLE -->
+    <section id="dining" class="section dining-section" aria-label="Dining and lifestyle">
+      <div class="section-inner">
+        <div class="dining-grid">
+          <div class="dining-image-col">
+            <div class="dining-image-frame">
+              <img src="/assets/images/dining_savini.png" alt="Savini restaurant dining under the Galleria dome" loading="lazy" class="reveal-img" width="800" height="600" />
+            </div>
+          </div>
+          <div class="dining-text-col">
+            <p class="section-eyebrow">Dining & Lifestyle</p>
+            <h2 class="section-title">Food as an<br/>Italian Art Form</h2>
+            <p class="section-body">At the Galleria, dining is not a convenience — it is a cultural pilgrimage. Since 1867, Savini has served heads of state, opera legends, and fashion royalty beneath the same iron-and-glass dome. This is the standard we set.</p>
+            <div class="dining-venues">
+              <div class="venue-item" id="venue-savini">
+                <div class="venue-year">1867</div>
+                <div class="venue-details">
+                  <h4>Ristorante Savini</h4>
+                  <p>Milan's most historic fine dining institution. White glove service, Milanese risotto, and a view that cannot be replicated.</p>
+                </div>
+              </div>
+              <div class="venue-item" id="venue-camparino">
+                <div class="venue-year">1915</div>
+                <div class="venue-details">
+                  <h4>Camparino in Galleria</h4>
+                  <p>Birthplace of the Campari Spritz. The aperitivo institution of Milan, beloved by Verdi, Hemingway, and Callas.</p>
+                </div>
+              </div>
+              <div class="venue-item" id="venue-mc">
+                <div class="venue-year">2012</div>
+                <div class="venue-details">
+                  <h4>Dining Terrace</h4>
+                  <p>Contemporary F&B expansion: curated artisan coffee, patisseries, and an elevated casual dining offer for the modern visitor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: ATTRACTIONS & ENTERTAINMENT -->
+    <section id="events" class="section attractions-section" aria-label="Attractions and entertainment">
+      <div class="section-inner">
+        <p class="section-eyebrow">Attractions & Entertainment</p>
+        <h2 class="section-title">The Stage Upon<br/>Which Milan Performs</h2>
+        <p class="section-body center">The Galleria's historic dome has hosted the world's most spectacular brand moments. It is not just a mall — it is the most photogenic, culturally charged event venue in Europe.</p>
+        <div class="attractions-grid">
+          <div class="attraction-card large" id="attraction-dome">
+            <img src="/assets/images/hero_dome.png" alt="The iconic 47m glass dome of Galleria Vittorio Emanuele II" loading="lazy" width="1000" height="750" />
+            <div class="attraction-overlay">
+              <h3>The Dome Experience</h3>
+              <p>47m of iron-and-glass engineering. The most dramatic event ceiling in the world.</p>
+            </div>
+          </div>
+          <div class="attraction-card" id="attraction-fashion">
+            <img src="/assets/images/fashion_event.png" alt="Milan Fashion Week activation under Galleria dome" loading="lazy" width="700" height="500" />
+            <div class="attraction-overlay">
+              <h3>Milan Fashion Week</h3>
+              <p>The epicentre of global fashion week activations, season after season.</p>
+            </div>
+          </div>
+          <div class="attraction-card" id="attraction-mosaic">
+            <img src="/assets/images/mosaic_floor.png" alt="The historic Taurus bull mosaic floor tradition" loading="lazy" width="700" height="500" />
+            <div class="attraction-overlay">
+              <h3>The Bull Mosaic Tradition</h3>
+              <p>A ritual observed by 15M visitors annually. The most famous floor in retail history.</p>
+            </div>
+          </div>
+          <div class="attraction-card" id="attraction-brand">
+            <img src="/assets/images/sponsorship.png" alt="Luxury brand launch event at Galleria" loading="lazy" width="700" height="500" />
+            <div class="attraction-overlay">
+              <h3>Brand Launch Events</h3>
+              <p>Ferrari debuts, luxury product reveals, exclusive collector experiences.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: EVENTS & PLATFORM -->
+    <section id="platform" class="section platform-section" aria-label="Events and platform">
+      <div class="platform-bg">
+        <img src="/assets/images/night_exterior.png" alt="Galleria Vittorio Emanuele II at night" loading="lazy" width="1920" height="1080" />
+        <div class="platform-overlay"></div>
+      </div>
+      <div class="section-inner platform-inner">
+        <p class="section-eyebrow light">Events & Platform</p>
+        <h2 class="section-title light">Position Your Brand at<br/>the Centre of Global Culture</h2>
+        <p class="section-body light center">The Galleria is not a building. It is a broadcast platform with 147 years of audience trust, in the media capital of the world's most influential creative industry.</p>
+
+        <div class="platform-modules" id="platform-modules">
+          <!-- Events Module -->
+          <div class="module-card active" id="module-events" role="button" tabindex="0" aria-expanded="true" aria-controls="module-events-detail">
+            <div class="module-header">
+              <div class="module-icon" aria-hidden="true">◎</div>
+              <h3>Events Module</h3>
+              <span class="module-toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="module-detail" id="module-events-detail">
+              <div class="module-content-grid">
+                <div class="module-text">
+                  <h4>World-Class Event Hosting</h4>
+                  <p>The Galleria's 12,000m² of covered arcade space transforms into the world's most prestigious event venue. Under the 47m glass dome, your event becomes a historic moment.</p>
+                  <ul class="module-list">
+                    <li>Concerts & Live Performances</li>
+                    <li>Product Launches & Brand Debuts</li>
+                    <li>Corporate Galas & Dinners</li>
+                    <li>Fashion Week Runway Shows</li>
+                    <li>Art Installations & Exhibitions</li>
+                  </ul>
+                  <div class="event-specs">
+                    <div class="spec"><span class="spec-num">12,000</span><span class="spec-label">m² Event Space</span></div>
+                    <div class="spec"><span class="spec-num">5,000+</span><span class="spec-label">Guest Capacity</span></div>
+                    <div class="spec"><span class="spec-num">47m</span><span class="spec-label">Dome Height</span></div>
+                  </div>
+                  <a href="#contact" class="module-cta" id="events-book-btn">Book an Event</a>
+                </div>
+                <div class="module-image">
+                  <img src="/assets/images/fashion_event.png" alt="Event under Galleria dome" loading="lazy" width="700" height="440" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sponsorship Module -->
+          <div class="module-card" id="module-sponsorship" role="button" tabindex="0" aria-expanded="false" aria-controls="module-sponsorship-detail">
+            <div class="module-header">
+              <div class="module-icon" aria-hidden="true">◆</div>
+              <h3>Sponsorship Module</h3>
+              <span class="module-toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="module-detail" id="module-sponsorship-detail">
+              <div class="module-content-grid">
+                <div class="module-text">
+                  <h4>Global Brand Partnership Tiers</h4>
+                  <p>Align your brand with the world's most prestigious retail address. Our sponsorship tiers offer unparalleled access to 15M+ annual visitors and the world's most coveted media exposure.</p>
+                  <div class="tier-cards">
+                    <div class="tier-card gold-tier" id="tier-title">
+                      <span class="tier-label">Title Partner</span>
+                      <ul>
+                        <li>Exclusive naming rights for seasonal events</li>
+                        <li>Dome projection &amp; façade branding</li>
+                        <li>VIP private dining access</li>
+                        <li>Global press release inclusion</li>
+                      </ul>
+                    </div>
+                    <div class="tier-card silver-tier" id="tier-presenting">
+                      <span class="tier-label">Presenting Sponsor</span>
+                      <ul>
+                        <li>Co-branded event programming</li>
+                        <li>Interior activation space</li>
+                        <li>Digital &amp; social media amplification</li>
+                      </ul>
+                    </div>
+                    <div class="tier-card bronze-tier" id="tier-associate">
+                      <span class="tier-label">Associate Partner</span>
+                      <ul>
+                        <li>Category exclusivity</li>
+                        <li>Pop-up space within the arcade</li>
+                        <li>Visitor data insights</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#contact" class="module-cta" id="sponsorship-enquire-btn">Explore Partnership</a>
+                </div>
+                <div class="module-image-stack">
+                  <img src="/assets/images/sponsorship.png" alt="Sponsorship activation at Galleria" loading="lazy" width="700" height="440" />
+                  <img src="/assets/images/retail_gallery.png" alt="Luxury brand activation showcase" loading="lazy" width="700" height="440" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leasing Module -->
+          <div class="module-card" id="module-leasing" role="button" tabindex="0" aria-expanded="false" aria-controls="module-leasing-detail">
+            <div class="module-header">
+              <div class="module-icon" aria-hidden="true">◇</div>
+              <h3>Leasing Paths</h3>
+              <span class="module-toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="module-detail" id="module-leasing-detail">
+              <div class="module-content-grid">
+                <div class="module-text">
+                  <h4>Your Space. Your Legacy.</h4>
+                  <p>A Galleria address is never just a retail lease — it is a cultural statement. Select the path that fits your brand ambition.</p>
+                  <div class="leasing-categories">
+                    <div class="lease-cat" id="lease-luxury">
+                      <span class="lease-icon" aria-hidden="true">◈</span>
+                      <div>
+                        <strong>Luxury Flagship</strong>
+                        <p>Ground-floor arcade positions. The pinnacle of global retail real estate.</p>
+                      </div>
+                    </div>
+                    <div class="lease-cat" id="lease-popup">
+                      <span class="lease-icon" aria-hidden="true">◈</span>
+                      <div>
+                        <strong>Pop-Up & Seasonal</strong>
+                        <p>Short-term immersive installations for product launches and exclusive drops.</p>
+                      </div>
+                    </div>
+                    <div class="lease-cat" id="lease-fnb">
+                      <span class="lease-icon" aria-hidden="true">◈</span>
+                      <div>
+                        <strong>F&B Concepts</strong>
+                        <p>Join Savini and Camparino. Curated dining within Italy's greatest covered space.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#contact" class="module-cta" id="leasing-enquire-btn">Enquire About Leasing</a>
+                </div>
+                <div class="module-image">
+                  <img src="/assets/images/leasing_space.png" alt="Available luxury retail space at Galleria" loading="lazy" width="700" height="440" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CONTACT / CTA -->
+    <section id="contact" class="section contact-section" aria-label="Contact and enquiry">
+      <div class="section-inner contact-inner">
+        <p class="section-eyebrow light">Begin the Conversation</p>
+        <h2 class="section-title light">Ready to Make History<br/>at the Galleria?</h2>
+        <p class="section-body light center">Every great brand partnership started with one conversation. Ours begins here.</p>
+        <div class="contact-paths">
+          <div class="contact-path" id="path-leasing">
+            <div class="path-icon" aria-hidden="true">◈</div>
+            <h3>Retail Leasing</h3>
+            <p>Explore available spaces in the world's most prestigious retail arcade.</p>
+            <button class="path-btn" id="path-leasing-btn" onclick="openContactForm('leasing')">Enquire About Leasing</button>
+          </div>
+          <div class="contact-path featured" id="path-sponsorship">
+            <div class="path-icon" aria-hidden="true">◆</div>
+            <h3>Brand Sponsorship</h3>
+            <p>Partner with 147 years of cultural authority and 15M annual touchpoints.</p>
+            <button class="path-btn featured-btn" id="path-sponsorship-btn" onclick="openContactForm('sponsorship')">Explore Partnership</button>
+          </div>
+          <div class="contact-path" id="path-events">
+            <div class="path-icon" aria-hidden="true">◎</div>
+            <h3>Event Booking</h3>
+            <p>Host your most important moment under the most iconic dome in the world.</p>
+            <button class="path-btn" id="path-events-btn" onclick="openContactForm('events')">Book an Event</button>
+          </div>
+        </div>
+
+        <!-- Contact Form Modal -->
+        <div id="contact-modal" class="contact-modal" role="dialog" aria-modal="true" aria-label="Contact form" hidden>
+          <div class="modal-overlay" id="modal-overlay"></div>
+          <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close contact form">✕</button>
+            <h3 id="modal-title">Get in Touch</h3>
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name">Full Name</label>
+                <input type="text" id="form-name" name="name" placeholder="Your full name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" name="email" placeholder="your@company.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="form-company">Company / Brand</label>
+                <input type="text" id="form-company" name="company" placeholder="Your company name" required autocomplete="organization" />
+              </div>
+              <div class="form-group">
+                <label for="form-type">Enquiry Type</label>
+                <select id="form-type" name="type" required>
+                  <option value="">Select enquiry type</option>
+                  <option value="leasing">Retail Leasing</option>
+                  <option value="sponsorship">Brand Sponsorship</option>
+                  <option value="events">Event Booking</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" name="message" placeholder="Tell us about your interest..." rows="4"></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="form-submit-btn">Send Enquiry</button>
+              <p class="form-note">Our commercial team will respond within 24 hours.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/logo.svg" alt="Galleria GVE Logo" class="footer-logo-img" />
+        <span class="footer-name">Galleria GVE</span>
+        <span class="footer-sub">Milan, Italy · Est. 1877</span>
+      </div>
+      <div class="footer-links">
+        <a href="#why-galleria">Property</a>
+        <a href="#retail">Retail</a>
+        <a href="#luxury">Luxury</a>
+        <a href="#dining">Dining</a>
+        <a href="#events">Events</a>
+        <a href="#platform">Platform</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Galleria GVE. Commercial Portfolio.</p>
+        <p>This interactive deck was created for commercial leasing and sponsorship purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="ng1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8CC7A"/>
+      <stop offset="50%" style="stop-color:#C9A84C"/>
+      <stop offset="100%" style="stop-color:#9A7A2E"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer ring -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#ng1)" stroke-width="3"/>
+  <circle cx="256" cy="256" r="236" fill="none" stroke="url(#ng1)" stroke-width="1" opacity="0.4"/>
+  <!-- Cardinal diamonds -->
+  <path d="M256 14 L262 28 L256 42 L250 28Z" fill="#C9A84C"/>
+  <path d="M256 470 L262 484 L256 498 L250 484Z" fill="#C9A84C"/>
+  <path d="M14 256 L28 250 L42 256 L28 262Z" fill="#C9A84C"/>
+  <path d="M470 256 L484 250 L498 256 L484 262Z" fill="#C9A84C"/>
+  <!-- Inner ring -->
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+  <!-- Monogram -->
+  <text x="256" y="290" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="90" font-weight="300" letter-spacing="16" fill="url(#ng1)">GVE</text>
+  <!-- Subtitle -->
+  <text x="256" y="220" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="24" letter-spacing="10" fill="#C9A84C" opacity="0.7">GALLERIA</text>
+  <text x="256" y="330" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="14" letter-spacing="8" fill="#C9A84C" opacity="0.6">MDCCCLXXVII</text>
+  <!-- Decorative lines -->
+  <line x1="160" y1="195" x2="220" y2="195" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+  <line x1="292" y1="195" x2="352" y2="195" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+  <line x1="160" y1="345" x2="220" y2="345" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+  <line x1="292" y1="345" x2="352" y2="345" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+</svg>
