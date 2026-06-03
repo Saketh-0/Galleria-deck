@@ -7,8 +7,7 @@
 
 ## Live Demo
 
-🔗 **[View Live Demo →](https://galleria-deck.vercel.app)**  
-*(Be sure to update this with your actual Vercel URL!)*
+🔗 **[View Live Demo →](https://galleria-deck.vercel.app)**
 
 ---
 
